@@ -33,8 +33,27 @@ def menu():
             menu()
 
 def main():
-    
     menu()
 
 if __name__ == '__main__':
     main()
+
+def pressureVolume():
+
+
+def volumeTemperature():
+
+
+def pressureTemperature():
+
+
+def volumeN():
+
+
+def pressureVolumeTemperature():
+
+
+def PVEqualsNRT():
+
+
+def rateMass():

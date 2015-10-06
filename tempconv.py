@@ -20,30 +20,30 @@ def tempConvChoose():
         tempConvChoose()
 
 def kelvin():
-    k = int(input("K "))
+    k = int(input("K= "))
     c = k - 273
     f = (c * 1.8) + 32
-    print("K= " + k)
-    print("ºC= " + c)
-    print("ºF= " + f)
+    print("K= " + str(k))
+    print("ºC= " + str(c))
+    print("ºF= " + str(f))
     return k
 
 def celcius():
-    c = int(input("ºC "))
+    c = int(input("ºC= "))
     k = c + 273
     f = (c * 1.8) + 32
-    print("K= " + k)
-    print("ºC= " + c)
-    print("ºF= " + f)
+    print("K= " + str(k))
+    print("ºC= " + str(c))
+    print("ºF= " + str(f))
     return k
 
 def fahrenheit():
-    f = int(input("ºF "))
+    f = int(input("ºF= "))
     c = (f - 32) / 1.8
     k = c + 273
-    print("K= " + k)
-    print("ºC= " + c)
-    print("ºF= " + f)
+    print("K= " + str(k))
+    print("ºC= " + str(c))
+    print("ºF= " + str(f))
     return k
 
 tempConvChoose()

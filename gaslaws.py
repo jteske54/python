@@ -1,4 +1,7 @@
-#import tempconv
+import tempconv, os
+
+def clear():
+    os.system('clear')
 
 def incorrect():
     print("You have selected an incorrect number. Please select again.")
@@ -7,8 +10,14 @@ def choice():
     x = int(input("What is your unknown? "))
     return x
 
+def xagain():
+    input("Press enter to do another conversion.")
+
 def menu():
+    clear()
     print("""
+    Gas Law Conversions
+    
     1. Pressure and Volume
     2. Volume and Temperature
     3. Pressure and Temperature
@@ -42,6 +51,11 @@ def menu():
         menu()
 
 def pressureVolume():
+    clear()
+    print("""
+    Pressure and Volume
+    
+    """)
     print("""
     Unknown:
     
@@ -57,8 +71,71 @@ def pressureVolume():
         incorrect()
         pressureVolume()
 
-#def volumeTemperature():
+def pressureVolumePressure():
+    clear()
+    print("Unknown Pressure")
+    P1 = int(input("P1= "))
+    V1 = int(input("V1= "))
+    V2 = int(input("V2= "))
+    P2 = (P1 * V1) / V2
+    print()
+    print("P2= " + str(P2))
+    xagain()
+    menu()
 
+def pressureVolumeVolume():
+    clear()
+    print("Unknown Volume")
+    P1 = int(input("P1= "))
+    V1 = int(input("V1= "))
+    P2 = int(input("V2= "))
+    V2 = (P1 * V1) / P2
+    print()
+    print("V2= " + str(V2))
+    input("Press enter to do another conversion.")
+    menu()
+
+def volumeTemperature():
+    clear()
+    print("Volume and Temperature")
+    print()
+    print("""
+    Unknown:
+            
+    1. Temperature
+    2. Volume
+    """)
+    z = choice()
+    if z == 1:
+        volumeTemperatureTemperature()
+    elif z == 2:
+        volumeTemperatureVolume()
+    else:
+        incorrect()
+        volumeTemperature()
+
+def volumeTemperatureTemperature():
+    clear()
+    print("Unknown Temperature")
+    V1 = int(input("V1= "))
+    T1 = tempconv.tempConvChoose()
+    V2 = int(input("V2= "))
+    print(T1)
+    T2 = V2 / (V1 / T1)
+    tempconv.xkelvin(T2)
+    xagain()
+    menu()
+
+def volumeTemperatureVolume():
+    clear()
+    print("Unknown Volume")
+    V1 = int(input("V1= "))
+    T1 = tempconv.tempConvChoose()
+    T2 = tempconv.tempConvChoose()
+    V2 = (V1 / T1) * T2
+    print("V2= " + str(V2))
+    xagain()
+    menu()
 
 #def pressureTemperature():
 

@@ -53,6 +53,7 @@ def xkelvin(pull):
     print("K= " + str(pull))
     print("ºC= " + str(c))
     print("ºF= " + str(f))
+    return k
 
 def xcelcius(pull):
     c = int(pull)
@@ -61,6 +62,7 @@ def xcelcius(pull):
     print("K= " + str(k))
     print("ºC= " + str(c))
     print("ºF= " + str(f))
+    return k
 
 def xfahrenheit(pull):
     f = int(pull)
@@ -69,6 +71,7 @@ def xfahrenheit(pull):
     print("K= " + str(k))
     print("ºC= " + str(c))
     print("ºF= " + str(f))
+    return k
 
 def main():
     tempConvChoose()

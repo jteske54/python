@@ -46,4 +46,8 @@ def fahrenheit():
     print("ºF= " + str(f))
     return k
 
-tempConvChoose()
+def main():
+    tempConvChoose()
+
+if __name__ == '__main__':
+    main()
